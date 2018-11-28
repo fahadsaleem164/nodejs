@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+ 	 <h2 align="center">Registration  Table</h2>         
+  		<table  class="table table-striped">
+    			<thead>
+				      <tr>
+				        <th>Firstname</th>
+				        <th>Lastname</th>
+				        <th>Password</th>
+				        <th>Address</th>
+				        <th>Delete</th>
+				        <th>Edit</th>
+				      </tr>
+    			</thead>
+    			<tbody>
+    					<%
+		    			myarray.forEach(function(value){ %>
+						<tr>
+		  				<td><%= value['username'] %></td>
+		  				<td><%= value['lastname'] %></td>
+		  				<td><%= value['password'] %></td>
+		  				<td><%= value['address'] %></td>
+		  				<td><a href="Delete/<%= value['username'] %>">Delete</a></td>
+		  				<td><a href="Edit/<%= value['username'] %>">Edit</a></td>
+		  				</tr> 
+						 <% }); %>
+    			</tbody>
+  		</table>
+	</div>
+</body>
+</html>

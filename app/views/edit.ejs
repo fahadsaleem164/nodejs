@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+
+		<div class="row">
+			<div class="col-lg-4"></div>
+			<div class="col-lg-4">
+<form id="myForm" method="post" action="/update">
+  <div class="form-group">
+   
+
+  	<h1 align="center"><b>Edit Registration Form</b></h1>
+    <%
+              myarray.forEach(function(value){ 
+              username=value['username'];
+              lastname=value['lastname'];
+              password=value['password'];
+              address=value['address'];
+              
+              
+
+
+
+
+
+});
+              %>
+
+   
+
+    <label for="exampleInputEmail1">Name:</label>
+    <input type="text" class="form-control" id="name" name="name" value="<%=
+    username
+     %>" style="display: none;">
+      <input type="text"   class="form-control" id="name" name="newname" value="<%=
+    username
+     %>">
+    
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">last Name:</label>
+    <input type="text" class="form-control" name="lastname" id="lastname" value="<%=
+    lastname
+     %>" >
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password:</label>
+    <input type="password" class="form-control" name="password" id="exampleInputPassword1"  value="<%=
+    password
+     %>">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1" >Meassage:</label>
+    <textarea class="form-control" name="message"><%=
+    address
+     %></textarea>
+  </div>
+ 
+  <button type="submit" class="btn btn-primary pull-right">Submit</button>
+</form>
+<br><br>
+  <a href="/show">show</a>
+</div>
+<div class="col-lg-4">
+
+
+	</div>
+</div>
+</div>
+</body>
+</html>
